@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+	   
+		<script src="https://kit.fontawesome.com/0c28bd682c.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="outdoors.css">
+		<meta charset="utf-8">
+		<title>Canyonlands National Park</title>
+	</head>
+
+
+	<body>
+		
+		<div id="aboutwrapper" class="cover" role="banner">
+			<div class="aboutcontainer">
+				<nav>
+					<div class="abouthead">				
+						<a href="index.html"><p>Lead Me Outdoors</p></a>
+					</div>
+					<div class="abouttopnav">
+						<ul>
+							<li><a href="about.html"><i class="far fa-user"></i>About Us</a></li>
+							<li><a href="faq.html"><i class="far fa-comments"></i>FAQ</a></li>
+							<div  class="aboutdropdown">
+								<li><button class="aboutdropbtn"><a href="hike.html"><i class="fas fa-hiking"></i>Find A Hike<i class="fa fa-caret-down"></i></a></button></li>
+								<div  class="aboutdropdown-content">
+									<a href="Teton.html">Grand Teton</a>
+									<a href="Canyon.html">Canyonlands</a>
+									<a href="Glacier.html">Glacier</a>
+									<a href="Yellow.html">Yellowstone</a>
+									<a href="Zion.html">Zion</a>
+									<a href="Yosemite.html">Yosemite</a>
+								</div>
+							</div>
+						</ul>
+			
+					</div>
+				</nav>
+			</div>
+			
+			
+			<main>
+					
+					<div id="mainpark">
+						<h1>Get ready for your adventure to begin!</h1>
+						<p>Welcome to the park page for <span>Canyonlands National Park</span>. 
+							Below you will find a short quiz that will provide you with a 
+							hike suggestion based on the answers you provide in the quiz. 
+							The suggestion will have a picture or video, a short description, 
+							and general information.</p>
+						
+					</div>
+						<form id="form1">
+							<h1>Find The Perfect Trail For You :: <span>Canyonlands National Park</span></h1>
+							<ul>								
+								<li>
+									<h2>Do you have any injuries or concerns? </h2>
+									<label for="inj_1"><input type="radio" name="inj" value="1" id="inj_1"/>Yes, they make distance and hills hard</label>
+									<label for="inj_2"><input type="radio" name="inj" value="2" id="inj_2"/>Yes, I struggle carrying weight on my back</label>
+									<label for="inj_3"><input type="radio" name="inj" value="3" id="inj_3" />Yes, but they don't affect me when walking long distances or up/ down hills or carrying weight</label>
+									<label for="inj_4"><input type="radio" name="inj" value="4" id="inj_4" />No injuries or concerns/ prefer not to answer</label>
+								</li>				
+								<li>
+									<h2>How many miles would you like to hike?</h2>
+									<label for="mile_1"><input type="radio" name="mile" value="1" id="mile_1" />1-4</label>
+									<label for="mile_2"><input type="radio" name="mile" value="2" id="mile_2" />5-9</label>
+									<label for="mile_3"><input type="radio" name="mile" value="3" id="mile_3" />10-15</label>
+									<label for="mile_4"><input type="radio" name="mile"  value="4" id="mile_4" />16-20+</label>
+								</li>
+							</ul>
+				
+							<button type="submit" value="Submit">Submit</button>
+				
+						</form>
+
+						<p hidden>Your grade is: <span id="grade">__</span></p>
+						<p id="grade2"></p>
+						<img id="pictures">
+						
+				
+				<script>document.getElementById("form1").onsubmit=function() 
+					{
+						   inj = parseInt(document.querySelector('input[name = "inj"]:checked').value);
+						   mile = parseInt(document.querySelector('input[name = "mile"]:checked').value);
+					
+					
+						   result = inj + mile;
+					
+						document.getElementById("grade").innerHTML = result;
+                    
+						var pictures =["images/forest.png", "images/forest.png", "images/forest.png","images/forest.png"];
+						
+						if (mile == 1)
+						{
+							
+							if(inj == 1 || inj == 2 || inj == 3 || inj == 4)
+								{result2 = "Schwabacher's Landing Hike: located near Moose, WY. This trail features a river and is slightly exposed, slightly wooded. Suitable for all ages and skill levels. Lenth: 1.8 mi. Elevation Gain: 22ft. Route Type: Out & Back. This trail is best accessed from May to October. We reccommend plenty of bug repellent, sun protection, waterproof shoes, bear spray, and plenty of water."};
+								range = 1;					
+						}
+						if (mile == 2)
+						{
+							if(inj == 1)
+                                {result2 = "Schwabacher's Landing Hike: located near Moose, WY. This trail features a river and is slightly exposed, slightly wooded. Suitable for all ages and skill levels. Lenth: 1.8 mi. Elevation Gain: 22ft. Route Type: Out & Back. This trail is best accessed from May to October. We reccommend plenty of bug repellent, sun protection, waterproof shoes, bear spray, and plenty of water."};
+								range = 1;
+
+							if(inj == 2 || inj == 3 || inj == 4)
+                                {result2 = "Schwabacher's Landing Hike: located near Moose, WY. This trail features a river and is slightly exposed, slightly wooded. Suitable for all ages and skill levels. Lenth: 1.8 mi. Elevation Gain: 22ft. Route Type: Out & Back. This trail is best accessed from May to October. We reccommend plenty of bug repellent, sun protection, waterproof shoes, bear spray, and plenty of water."};
+								range = 2;
+						}							
+						if (mile == 3)
+						{
+							if(inj == 1)
+                                {result2 = "Schwabacher's Landing Hike: located near Moose, WY. This trail features a river and is slightly exposed, slightly wooded. Suitable for all ages and skill levels. Lenth: 1.8 mi. Elevation Gain: 22ft. Route Type: Out & Back. This trail is best accessed from May to October. We reccommend plenty of bug repellent, sun protection, waterproof shoes, bear spray, and plenty of water."};
+								range = 1;
+
+							if(inj == 2)
+                                {result2 = "Schwabacher's Landing Hike: located near Moose, WY. This trail features a river and is slightly exposed, slightly wooded. Suitable for all ages and skill levels. Lenth: 1.8 mi. Elevation Gain: 22ft. Route Type: Out & Back. This trail is best accessed from May to October. We reccommend plenty of bug repellent, sun protection, waterproof shoes, bear spray, and plenty of water."};
+								range = 2;
+							if(inj == 3 || inj == 4)
+                                {result2 = "Schwabacher's Landing Hike: located near Moose, WY. This trail features a river and is slightly exposed, slightly wooded. Suitable for all ages and skill levels. Lenth: 1.8 mi. Elevation Gain: 22ft. Route Type: Out & Back. This trail is best accessed from May to October. We reccommend plenty of bug repellent, sun protection, waterproof shoes, bear spray, and plenty of water."};
+								range = 3;
+						}
+						if (mile == 4)
+						{
+							if(inj == 1)
+                                {result2 = "Schwabacher's Landing Hike: located near Moose, WY. This trail features a river and is slightly exposed, slightly wooded. Suitable for all ages and skill levels. Lenth: 1.8 mi. Elevation Gain: 22ft. Route Type: Out & Back. This trail is best accessed from May to October. We reccommend plenty of bug repellent, sun protection, waterproof shoes, bear spray, and plenty of water."};
+								range = 1;
+							if(inj == 2)
+                                {result2 = "Schwabacher's Landing Hike: located near Moose, WY. This trail features a river and is slightly exposed, slightly wooded. Suitable for all ages and skill levels. Lenth: 1.8 mi. Elevation Gain: 22ft. Route Type: Out & Back. This trail is best accessed from May to October. We reccommend plenty of bug repellent, sun protection, waterproof shoes, bear spray, and plenty of water."};
+								range = 2;
+							if(inj == 3 || inj == 4)
+                                {result2 = "Schwabacher's Landing Hike: located near Moose, WY. This trail features a river and is slightly exposed, slightly wooded. Suitable for all ages and skill levels. Lenth: 1.8 mi. Elevation Gain: 22ft. Route Type: Out & Back. This trail is best accessed from May to October. We reccommend plenty of bug repellent, sun protection, waterproof shoes, bear spray, and plenty of water."};
+								range = 4;
+						}
+					
+						document.getElementById("pictures").src = pictures[range];			
+						document.getElementById("grade2").innerHTML = result2;
+						
+					
+						return false; // required to not refresh the page; just leave this here
+					}
+				</script>
+				
+				
+			</main>
+			
+			<footer>
+				<p>Copyright &copy; 2021 Lead Me Outdoors</p>
+			</footer>
+			
+		</div>
+	</body>
+</html>

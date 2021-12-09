@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+	<html lang='en'>
+		<head>
+           
+			<script src="https://kit.fontawesome.com/0c28bd682c.js" crossorigin="anonymous"></script>
+			<link rel="stylesheet" href="outdoors.css">
+			<meta charset="utf-8">
+			<title>FAQ</title>
+		</head>
+
+
+		<body>
+            
+			<div id="aboutwrapper" class="cover" role="banner">
+				<div class="aboutcontainer">
+					<nav>
+						<div class="abouthead">				
+							<a href="index.html"><p>Lead Me Outdoors</p></a>
+						</div>
+						<div class="abouttopnav">
+							<ul>
+								<li><a href="about.html"><i class="far fa-user"></i>About Us</a></li>
+								<li><a href="faq.html"><i class="far fa-comments"></i>FAQ</a></li>
+								<div  class="aboutdropdown">
+									<li><button class="aboutdropbtn"><a href="hike.html"><i class="fas fa-hiking"></i>Find A Hike<i class="fa fa-caret-down"></i></a></button></li>
+									<div  class="aboutdropdown-content">
+										<a href="Teton.html">Grand Teton</a>
+										<a href="Canyon.html">Canyonlands</a>
+										<a href="Glacier.html">Glacier</a>
+										<a href="Yellow.html">Yellowstone</a>
+										<a href="Zion.html">Zion</a>
+										<a href="Yosemite.html">Yosemite</a>
+									</div>
+								</div>
+							</ul>
+				
+						</div>
+					</nav>
+				</div>
+				
+				
+				<main id="mainfaq">
+					<div class="aboutcontainer">
+				
+						<div class="faqhero">
+                            <h1>Frequently Asked Questions</h1>
+							<button class="accordion">What should I bring?</button>
+                            <div class="panel">
+                                <p>Make sure to bring plenty of water, snacks, and various
+                                    clothing layers based on the weather and terrain. 
+                                </p>
+                            </div>
+
+                            <button class="accordion">What should I wear?</button>
+                            <div class="panel">
+                                <p>You should base your attire on your local weather conditions
+                                    and the type of hike you choose. Generally, bring warm and 
+                                    waterproof layers, a good set of hiking shoes that are 
+                                    broken in, and something to protect you from the sun.
+                                </p>
+                            </div>
+
+                            <button class="accordion">What about bears?</button>
+                            <div class="panel">
+                                <p>If you're worried about bears, you can make some sort 
+                                    of noise constantly to make them aware of your presence. 
+                                    If you come upon one on a trail, back away slowly and do 
+                                    not engage. If the situation gets bad, use bear spray. 
+                                </p>
+                            </div>
+
+                            <button class="accordion">What is bear spray/ how do I use it?</button>
+                            <div class="panel">
+                                <p>Bear spray is similar to extra strong mace and is used to 
+                                    momentarily incapacitate a bear or other large animal in 
+                                    a life and death situation. It should not be used lightly 
+                                    and is very irritating to human eyes and skin, so use with
+                                    care. Never spray yourself or children. Not similar to bug
+                                    spray. Avoid skin and eyes.
+                                </p>
+                            </div>
+
+                            <button class="accordion">Are bugs bad?</button>
+                            <div class="panel">
+                                <p>That can depend on the time of year, as well as what type
+                                    of terrain you plan to hike in. If you're near water or in
+                                    completely wooded areas, there is a high likelihood you 
+                                    will encounter bugs. A general rule of thumb is that it's
+                                    better to have bug repellent and not need it, then need it 
+                                    and not have it. 
+                                </p>
+                            </div>
+
+                            <button class="accordion">How do I use the quiz?</button>
+                            <div class="panel">
+                                <p>Once on the desired park page, all you have to do is follow
+                                    the prompts that ask you to answer a few questions. Once
+                                    completed, use the given suggestions and advice to help
+                                    make a decision on which trail you would like to do. 
+                                </p>
+                            </div>
+
+                            <button class="accordion">Where can I find contact information?</button>
+                            <div class="panel">
+                                <p>All of our contact information can be found on the About Us page, 
+                                    as well as a form to send us a message.
+                                </p>
+                            </div>
+
+                            <button class="accordion">Why do I need to disclose injuries?</button>
+                            <div class="panel">
+                                <p>We don't require that you do (answer that you have no injuries), 
+                                    but we highly reccommend that you do, so that we are better able
+                                    to suggest trails that you will not only enjoy, but that will keep 
+                                    you from injuring yourself further. 
+                                </p>
+                            </div>
+
+                            <button class="accordion">What does 'leave no trace' mean?</button>
+                            <div class="panel">
+                                <p>It means that whatever you bring into nature including, 
+                                    but not limited to: food, clothing, or trash, will 
+                                    leave nature still in your possession. You pack it in, 
+                                    you pack it out. Keep nature wild.</p>
+                            </div>
+						</div>
+					</div>
+                    <script>
+                        var acc = document.getElementsByClassName("accordion");
+                        var i;
+
+                        for (i = 0; i < acc.length; i++) 
+                        {
+                            acc[i].addEventListener("click", function() 
+                            {
+                                this.classList.toggle("active");
+                                var panel = this.nextElementSibling;
+                                if (panel.style.maxHeight) 
+                                {
+                                    panel.style.maxHeight = null;
+                                } 
+                                else {
+                                    panel.style.maxHeight = panel.scrollHeight + "px";
+                                }
+                            });
+                        }
+                    </script>
+				</main>
+				
+				<footer>
+					<p>Copyright &copy; 2021 Lead Me Outdoors</p>
+				</footer>
+				
+			</div>
+		</body>
+	</html>
